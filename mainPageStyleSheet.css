@@ -13,6 +13,14 @@
   margin-bottom: 50px;
 }
 
+.banner {
+  background: rgb(43, 47, 49);
+  color: #ffffff;
+  font-weight: normal;
+  padding: 15px;
+  margin: -75px -50px 30px -50px
+}
+
 .box {
   display: inline-flex;
   flex-direction: column;
