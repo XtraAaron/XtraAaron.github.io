@@ -14,6 +14,12 @@
   text-decoration: none;
 }
 
+.boxReturn:hover {
+  background: #555;
+  transform: scale(1.05);
+  color: #fff;
+}
+
 .main-img {
   width: 600px;
   height: 450px;
@@ -34,8 +40,36 @@
   margin: 10px auto;
 }
 
+.contentBox h2 {
+  margin-bottom: 10px;
+}
+
+.contentBox h3 {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.contentBox p {
+  margin-top: 0;
+}
+
 ul {
   display: inline-block;
   text-align: left;
   list-style-position: inside;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag {
+  background: #333;
+  color: #eee;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 1.2em;
 }
