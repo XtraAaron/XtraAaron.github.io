@@ -22,6 +22,7 @@ body {
 }
 
 .box {
+  position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
@@ -123,4 +124,39 @@ a:hover {
 
 .hidden {
   color: #1a1a1a;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag {
+  background: #333;
+  color: #eee;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 1.2em;
+}
+
+.tagRowPortfolio {
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tagPortfolio {
+  background: #333;
+  color: #eee;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  font-weight: bold;
 }

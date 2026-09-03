@@ -1,6 +1,6 @@
 .main-img {
-  width: 600px;
-  height: 450px;
+  width: 750px;
+  height: 500px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -35,19 +35,4 @@ ul {
   display: inline-block;
   text-align: left;
   list-style-position: inside;
-}
-
-.tagRow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-.tag {
-  background: #333;
-  color: #eee;
-  padding: 12px 24px;
-  border-radius: 20px;
-  font-size: 1.2em;
 }
