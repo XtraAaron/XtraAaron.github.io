@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="../mainPageStyleSheet.css">
+<link rel="stylesheet" type="text/css" href="../cssSubPages/subPageStyleSheet.css">
+<link rel="stylesheet" href="https://fonts.google.com/icons">
+
+
+<html>
+<head>
+ <meta charset="utf-8" />
+ <title>Aaron Yee</title>
+</head>
+
+<body>
+    <div class="navBar"></div>
+    <a class="navItem navHome" href="../index.html"><strong>Home</strong></a>
+    <a class="navItem navPortfolio" href="../portfolio.html"><strong>Portfolio</strong></a>
+    <br>
+    <div>
+        <h1>ASL Hand Tracker</h1>
+    </div>
+
+
+    <div class="tagRow">
+        <span class="tag">Python</span>
+        <span class="tag">Blender</span>
+        <span class="tag">C++</span>
+        <span class="tag">MediaPipe</span>
+    </div>
+
+
+    <br>
+
+    <div class="contentBox">
+        <h2>Description</h2>
+        <p>
+            The American Sign Language (ASL) Hand-Tracker project was the final project of ENSC 482 
+            (Introduction to Decision Making in Engineering). It is designed to track the user's hand, 
+            and determine the displayed letter or number. It is capiable of understanding each of the 26
+            letters of the English alpabet, as well as numbers 1-10. In addition, a real-time virtual representation
+            of the hand is displayed in blender. Interestingly enough, the software
+            is also somewhat capiable of tracking feet similar to fingers.
+            It can be found as a repository on my GitHub.
+        </p>
+        <img src="../images/handTracker_V_Example.jpg" alt="Keyboard" class="main-img">
+        <p><em>ASL "V" example</em></p>
+
+        <img src="../images/handTracker_L_Example.jpg" alt="Keyboard" class="main-img">
+        <p><em>ASL "L" example</em></p>        
+    </div>
+
+    <br>
+
+    <div class="contentBox">
+        <h2>Challenges</h2>
+            <h3>Axis system</h3>
+            <p>
+                The primary challenge of this project, was figuring out the axis system that the fingers
+                could use. Since this axis system would need to rotate along the wrist, and ideally would be 
+                compatible with the thumb.
+            </p>
+            <p>
+                To account for this, I developed a system that works off a "basis frame." This basis frame
+                is either the first frame captured, or a use selected frame. The rotations of the wrist are then
+                found in relation to this frame. The 3D axis is developed relative to this rotation, with a palm 
+                normal vector, across (index knuckle to pinky knuckle) vector, and vertical (from wrist to middle
+                finger knuckle). Since this axis is applied at the basis of the bone being rotated, this system
+                additionally works for the thumb.
+            </p>
+        <h3>Tuning</h3>
+            <p>
+                Tuning was a unique challenge, primarily due to how similar a lot of symbols were. More problematic
+                was that some letters required full hand movement. Since the virtual model was rooted in place,
+                this was impossible. I ended up finding an alphabet that didn't require movement. In theory, this may
+                be possible to impliement, but it would require a lot of work, as MediaPipe cannot easily track movement.
+            </p>
+            <p>
+                This made tuning more difficult, as many letters had only minor differences, tracking is difficult. In the time frame I was given, I did a decent job, as every letter was trackable. However, with more time, the tuning could be vastly improved.
+            </p>
+    </div>
+
+    <br>    
+
+    <div class="contentBox">
+        <h2>What I learned</h2>
+        <p>
+            The 2 main things I learned from this, were Python and Blender. Since the MediaPipe and Blender portion ran  on Python, I was required to learn Python properly. I had limited experience working with Python from a previous hackathon, where I made a chatbot using ChatGpt API to replicated modern slang. However, I only had limited work with the Python, as it was a 4 man team. This project really force me to properly learn Python in a practical setting.
+        </p>
+        <p>
+            In addition, I gained experience working with Blender, as the virtual recreation was done in Blender. I learned about rigging, bones, and scripting using Python. In addition, I had a practical application to apply my vector knowledge, using knowledge of normalization, and matricies to create the axis and rotational systems.
+        </p>
+    </div>    
+</body>
+<p class="hidden">
+    Lucky there's a Family Guy, Lucky there's a man who positively can do, All the things that make us, Laugh and cry
+</p>
+</html>

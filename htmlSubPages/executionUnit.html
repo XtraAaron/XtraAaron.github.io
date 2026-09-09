@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="../mainPageStyleSheet.css">
+<link rel="stylesheet" type="text/css" href="../cssSubPages/subPageStyleSheet.css">
+<link rel="stylesheet" href="https://fonts.google.com/icons">
+
+
+<html>
+<head>
+ <meta charset="utf-8" />
+ <title>Aaron Yee</title>
+</head>
+
+<body>
+    <div class="navBar"></div>
+    <a class="navItem navHome" href="../index.html"><strong>Home</strong></a>
+    <a class="navItem navPortfolio" href="../portfolio.html"><strong>Portfolio</strong></a>
+    <br>
+    <div>
+        <h1>RISC-V Execution Unit</h1>
+    </div>
+
+
+    <div class="tagRow">
+        <span class="tag">VHDL</span>
+        <span class="tag">ModelSim</span>
+        <span class="tag">Quartus Prime</span>
+        <span class="tag">RISC-V</span>
+        <span class="tag">Computer Architecture</span>
+    </div>
+
+
+    <br>
+
+    <div class="contentBox">
+        <h2>Description</h2>
+        <p>
+            The RISC-V Execution Unit (Exu) was the final 3-man group project of ENSC 350, Digital Systems Design. 
+            It is a recreation of an execution unit found in a RISC-V processor, capable of being implimented
+            in a real processor with full instruction coverage. A comprehensive report detailing the timing
+            and cost results of testing multiple design candidates (consisting of different combinations of adders
+            and shifters) was written in conjuction. The report found that from the tested candidates,
+            the Brent-Kung + 2-channel mux was the best for the Cyclone IV FPGA, while the 
+            Brent-Kunt + 8-channel mux was best for the Arria II FPGA.
+        </p>
+        <img src="../images/image_SampleShifter.png" alt="Keyboard" class="main-img">
+        <p><em>Sample 8-channel shifter</em></p>
+
+        <img src="../images/image_SampleBK.png" alt="Keyboard" class="main-img">
+        <p><em>Sample Brent-Kung Adder</em></p>    
+
+        <img src="../images/image_SampleWave.png" alt="Keyboard" class="main-img">
+        <p><em>Sample Waveform (Functionality)</em></p>       
+    </div>
+
+    <br>
+
+    <div class="contentBox">
+        <h2>Challenges</h2>
+            <h3>Adaptive Design</h3>
+                <p>
+                    The exu was designed to be tested with a variety of different input sizes, of varying powers of 2.
+                    There were 2 options to accomodate this, manually change the .vhd files for each input size, or make
+                    the inherent structure adaptable to different input sizes, with the latter being choosen. 
+                </p>
+                <p>
+                    This would mean that testing would be massively expedited, however this complicated the development
+                    process. The recursive and iterative implimentations of the adders made this process relativly easy.
+                    The shifters required a logarithmic algorithm, where the correct bits could be mapped correctly
+                    to the muxes.
+                </p>
+            <h3>Debugging</h3>
+                <p>
+                    Debugging proved to be a particularly challenging task, due to the depth and complexity of the systems.
+                    As the primary debugger, this project tested my debugging abilities in this sense, as I utilized both Quartus and ModelSim
+                    to determine bugs. The aformentioned shifter proved problematic, due the adaptive nature.
+                </p>                
+    </div>
+
+    <br>    
+
+    <div class="contentBox">
+        <h2>What I learned</h2>
+        <p>
+           This project was the culmination of my (at the time) computer knowledge and experience. I gained a lot of
+           information about practical computer design, as well as testing and debugging said designs. In particular,
+           I gained a lot of expeience with testing. For example, when performing the functionality tests, I learned that
+           you should inspect the tests themselves for correctness, as my expected results were incorrect. Thus this lead
+           to false negatives.
+        </p>
+    </div>    
+</body>
+<p class="hidden">
+    I hate coal mining, why do i need a Divan's drill. Hell, they should nerf farming some more and mega buff mining
+    (Not biased)
+</p>
+</html>
