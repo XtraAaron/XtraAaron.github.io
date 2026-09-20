@@ -35,14 +35,15 @@
     <div class="contentBox">
         <h2>Description</h2>
         <p>
-            This project is a position controller for a 2-link robotic arm, made in a 3-member team. My role was
-            primarily focused on the theoretical aspect of the controller and assisting Simulink testing. This controller
-            was modelled in MATLAB and Simulink, with 2 versions made. One was a PID controller, and the other was a
-            P controller with lead-lag compensators. All values were found by hand, and a comprehensive report detailing
-            the full design process and observations was additionally written. 
+            The Transforming Home Assistance Robot is a robot design to assist the elderly in home tasks. It is designed
+            to transform for easy storage, and fit into a dock. The robot arm fits a interchangable end effector 
+            that can be a claw arm for grabbing objects, or a tablet holder. 
         </p>     
 
-        <img src="../images/image_SimulinkComp.png" alt="Keyboard" class="main-img">
+        <video width="640" controls>
+            <source src="../videos/transformer.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <p><em>Robot Overview</em></p>
 
         <img src="../images/image_SimulinkPID.jpg" alt="Keyboard" class="main-img">
@@ -53,24 +54,16 @@
 
         <img src="../images/image_SimulinkPID.jpg" alt="Keyboard" class="main-img">
         <p><em>Robot Dock</em></p>        
-
-        <img src="../images/image_SimulinkPID.jpg" alt="Keyboard" class="main-img">
-        <p><em>Robot Arm</em></p>           
+    
     </div>
 
     <br>
 
     <div class="contentBox">
         <h2>Challenges</h2>
-            <h3>Deriving PID Values</h3>
+            <h3>Creative Problem Solving and Consideration of Constraints</h3>
                 <p>
-                    The hardest part of the project was the derivation of the gain constants. Overall, 6 
-                    iteratprojects/roboArm.htmlions were required, with the last 3 iterations in particular proving a challenge.
-                    The 4th iteration required a pole to be flipped in lead compensator, as it proved too fragile.
-                    The 5th iteration took more time to figure out, however it was determined that the values would
-                    need to be recalculated with the flipped lead. Finally, the 6th iteration found new overall gains
-                    from the changes. With this new lead-lag compensator, it was then easily converted to the desired
-                    PID form.
+                    The biggest challenge was designing to robot with consideration of the given constraints.
                 </p>            
     </div>
 
@@ -79,14 +72,10 @@
     <div class="contentBox">
         <h2>What I learned</h2>
         <p>
-            This project taught me a lot about PID controllers in general, especailly their design and practical applications.
-            The main lesson I learned was that theory does not exactly match reality, in this case the derivations of
-            the controller looked correct, but upon testing it was disovered that it didn't work. When possible, 
-            simulations should be used to verify results, especially before applying systems to physical hardware.
+            Mechanical problem solving, mcmaster carr, engineering techniques
         </p>
     </div>    
 </body>
 <p class="hidden">
-    You're a slave to history; even after Calamity, you fight against the only order that can guarantee the safety of your people. You, solely, are responsible for this. 
-</p>
+    Guys the thermal drill go get it
 </html>
