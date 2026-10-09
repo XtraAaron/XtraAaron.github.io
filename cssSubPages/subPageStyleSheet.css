@@ -12,6 +12,13 @@
   border-radius: 6px;
 }
 
+.beagle-img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 .contentBox {
   display: flex;
   flex-direction: column;
