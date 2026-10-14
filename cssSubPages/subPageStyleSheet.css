@@ -19,6 +19,13 @@
   border-radius: 6px;
 }
 
+.dam-img {
+  width: 750px;
+  height: 650px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
 .contentBox {
   display: flex;
   flex-direction: column;
