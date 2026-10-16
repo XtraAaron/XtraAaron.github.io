@@ -26,6 +26,15 @@
   border-radius: 6px;
 }
 
+.grabber-img {
+  width: 100%;
+  max-width: 750px;
+  height: 525px;
+  /* margin-bottom: -62px; */
+  object-fit: contain;
+  border-radius: 6px;
+}
+
 .contentBox {
   display: flex;
   flex-direction: column;
