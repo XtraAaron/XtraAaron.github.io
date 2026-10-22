@@ -4,6 +4,23 @@ body {
   color: #eee;
   text-align: center;
   padding: 50px;
+  margin: 0;
+}
+
+.footer {
+  background: #252525;
+  color: #ffffff;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column; /* stacks the items vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
 
 .row {
@@ -69,13 +86,38 @@ a:hover {
 }
 
 .navBar {
-  position: absolute; /* If u want move with scroll do fixed not abs */
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 77px;
+  right: 0px;      /* replaces width: 100% */
+  height: 80px;
+  box-sizing: border-box;
   background: #252525;
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* centers the text inside the fixed width */
+  width: 180px;            /* same for both buttons */
+  box-sizing: border-box;
+  padding: 15px 0;
+  background: #252525;
+  border-radius: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  color: #eee;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.socialRow {
+  display: flex;
+  gap: 20px;
 }
 
 .contentBoxMain {
@@ -88,38 +130,13 @@ a:hover {
   background: #252525;
   border-radius: 10px;
   color: #eee;
-  margin: 10px auto;
-}
-
-.navItem {
-  position: absolute; 
-  top: 10px;
-  z-index: 2;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 40px;
-  background: #252525;
-  border-radius: 10px;
-  transition: background 0.3s ease, transform 0.2s ease;
-  color: #eee;
-  text-decoration: none;
-  font-size: 1.5em;
+  margin: 3% auto;
 }
 
 .navItem:hover {
   background: #555;
   transform: scale(1.05);
   color: #fff;
-}
-
-.navHome {
-  left: 41.4%;
-}
-
-.navPortfolio {
-  right: 41.4%;
 }
 
 .hidden {
