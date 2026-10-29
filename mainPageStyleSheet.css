@@ -3,8 +3,14 @@ body {
   background: #1a1a1a;
   color: #eee;
   text-align: center;
-  padding: 50px;
+  /* margin-bottom: 500px; */
+  /* padding: 50px; */
   margin: 0;
+
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -13,11 +19,11 @@ body {
   padding: 10px;
   box-sizing: border-box;
   width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
+
+  margin-top: auto;
+
   display: flex;
-  flex-direction: column; /* stacks the items vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
@@ -125,12 +131,17 @@ a:hover {
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  width: 1200px;
+
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
+
   padding: 20px 25px;
   background: #252525;
   border-radius: 10px;
   color: #eee;
-  margin: 3% auto;
+
+  margin: 110px auto 30px;
 }
 
 .navItem:hover {
@@ -141,6 +152,7 @@ a:hover {
 
 .hidden {
   color: #1a1a1a;
+  margin-top: -1%;
 }
 
 .tagRow {
