@@ -29,6 +29,10 @@ body {
   gap: 8px;
 }
 
+.descriptor {
+  font-size: 1.2em;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -126,6 +130,7 @@ a:hover {
   gap: 20px;
 }
 
+.contentBoxMain_index, 
 .contentBoxMain {
   display: flex;
   flex-direction: column;
@@ -136,12 +141,97 @@ a:hover {
   max-width: 1000px;
   box-sizing: border-box;
 
-  padding: 10px;
+  padding: 25px;
   background: #252525;
   border-radius: 10px;
   color: #eee;
 
   margin: 110px auto 30px;
+}
+
+.contentBoxMain_index {
+  margin-top: 0%;
+}
+
+.aboutRow {
+  display: flex;
+  flex-wrap: wrap;          /* lets the boxes stack on small screens */
+  justify-content: center;
+  align-items: stretch;     /* both boxes match in height */
+  gap: 2%;
+  width: 90%;
+  max-width: 1200px;
+  margin: 110px auto -4%;  /* the 110px top margin moves here from the boxes */
+}
+
+.pic_info,
+.pic_of_me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 49%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: #252525;
+  border-radius: 10px;
+  color: #eee;
+  margin: 0;
+}
+
+.pic_info {
+  width: 38%;   /* text box */
+}
+
+.pic_of_me {
+  width: 60%;   /* picture box */
+}
+
+.me-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+@media (max-width: 768px) { /* Note  that ima make ts for everything TODO */
+  .pic_info,
+  .pic_of_me {
+    width: 100%;
+  }
+
+  .aboutRow {
+    gap: 20px;
+  }
+}
+
+.skillRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2%;
+  width: 100%;
+}
+
+.skillBox {
+  flex: 1 1 22%;      /*4 per row*/
+  min-width: 200px;    /* below this, boxes drop to the next line */
+  box-sizing: border-box;
+  padding: 15px;
+  margin-bottom: 15px;
+  background: #333;
+  border-radius: 10px;
+}
+
+.skillBox h3 {
+  margin-top: 0;
+}
+
+.skillBox ul {
+  display: inline-block;
+  text-align: left;
+  margin: 0;
+  padding-left: 20px;
 }
 
 .navItem:hover {
