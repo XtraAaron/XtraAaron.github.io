@@ -1,3 +1,7 @@
+html {
+  background: #252525;   /* footer colour, shows below the page */
+}
+
 body {
   font-family: Helvetica, sans-serif;
   background: #1a1a1a;
@@ -6,7 +10,7 @@ body {
   /* margin-bottom: 500px; */
   /* padding: 50px; */
   margin: 0;
-
+  background: #1a1a1a;
   min-height: 100%;
   box-sizing: border-box;
   display: flex;
