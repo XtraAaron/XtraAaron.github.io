@@ -188,6 +188,11 @@ a:hover {
   width: 38%;   /* text box */
 }
 
+.socialIcon{
+  width: 100%;      
+  height: auto;     
+}
+
 .pic_of_me {
   width: 60%;   /* picture box */
 }
