@@ -319,8 +319,15 @@ li { font-size: 1.65rem; }
 /* Large phones / small tablets */
 @media (max-width: 980px) {
   .navItem {
+    width: 42%;
+    padding: 18px 0;
     font-size: 2rem;
+    font-size: 2.2rem;
   }
+
+  .navBar {
+    gap: 4%;
+  }  
 }
 
 /* Phones */
