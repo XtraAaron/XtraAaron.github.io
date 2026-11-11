@@ -113,42 +113,33 @@ a:hover {
   right: 0px;      /* replaces width: 100% */
   height: 10%;
   box-sizing: border-box;
-  /* background: #252525; */
+  background: #252525;
   z-index: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .5%;
+  gap: 2%;
 }
 
-@media (max-width: px) {
+/* @media (max-width: 830px) {
   .skillBox {
     height: 25%;
   }
-}
+} */
 
 .navItem {
   display: inline-flex;
   align-items: center;
   justify-content: center; /* centers the text inside the fixed width */
-  width: 20%;            /* same for both buttons */
+  width: 9%;            /* same for both buttons */
   box-sizing: border-box;
   padding: 1.5% 0;
   background: #252525;
-  border-radius: 5px;
+  border-radius: 3%;
   transition: background 0.3s ease, transform 0.2s ease;
   color: #eee;
   text-decoration: none;
   font-size: 1.5em;
-}
-@media (max-width: 980px) {
-  .skillBox {
-    height: 35%;
-    margin-top: -1.5%;
-  }
-  .navItem{
-    font-size: 2em;
-  }
 }
 
 .socialRow {
