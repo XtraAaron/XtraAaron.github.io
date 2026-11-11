@@ -1,80 +1,211 @@
-html {
-  background: #252525;   /* footer colour, shows below the page aaa*/
+/* ==========================================================
+   VARIABLES
+   ========================================================== */
+:root {
+  --nav-h: 110px;          /* navbar height + space reserved for it */
+  --bg: #1a1a1a;
+  --panel: #252525;
+  --panel-light: #333;
+  --hover: #555;
+  --text: #eee;
+  --link: #6cf;
 }
 
-h1 { font-size: 2.5em; }
-h2 { font-size: 2.1em; }
-h3 { font-size: 1.8em; }
-p  { font-size: 1.65em; }
-li  { font-size: 1.65em; }
-
-@media (max-width: 768px) {
-  p    { font-size: 1.8rem; }
-  li  { font-size: 1.8em; }
+/* ==========================================================
+   BASE / PAGE
+   ========================================================== */
+html {
+  background: var(--panel);   /* footer colour, shows below the page on tall screens */
 }
 
 body {
-  font-family: Helvetica, sans-serif;
-  background: #1a1a1a;
-  color: #eee;
-  text-align: center;
-  /* margin-bottom: 500pix; */
-  /* padding: 50pix; */
   margin: 0;
-  background: #1a1a1a;
-  min-height: 100%;
+  min-height: 100vh;          /* was 100%, which does nothing without a height on html */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  font-family: Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  text-align: center;
 }
 
-.footer {
-  background: #252525;
-  color: #ffffff;
-  padding: 1%;
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #fff;
+}
+
+/* ==========================================================
+   TYPOGRAPHY (rem so nothing compounds when nested)
+   ========================================================== */
+h1 { font-size: 2.5rem; }    /* TODO mobile: add smaller h1 in the phone media query at the bottom */
+h2 { font-size: 2.1rem; }    /* TODO mobile: add smaller h2 in the phone media query at the bottom */
+h3 { font-size: 1.8rem; }    /* TODO mobile: add smaller h3 in the phone media query at the bottom */
+p  { font-size: 1.65rem; }
+li { font-size: 1.65rem; }
+
+/* ==========================================================
+   NAVBAR
+   ========================================================== */
+.navBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav-h);       /* TODO mobile: fixed height, switch to min-height if buttons ever wrap */
   box-sizing: border-box;
-  width: 100%;
-
-  margin-top: auto;
-
+  z-index: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1%;
+  gap: 10px;
+  /* background: var(--panel); */
 }
 
-.row {
+.navItem {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 20%;                 /* TODO mobile: % width gets tiny on phones, min-width below is a stopgap */
+  min-width: 140px;
+  padding: 20px 0;
+  background: var(--panel);
+  border-radius: 5px;
+  color: var(--text);
+  font-size: 1.5rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navItem:hover {
+  background: var(--hover);
+  transform: scale(1.05);
+  color: #fff;
+}
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+.footer {
+  margin-top: auto;           /* pushes the footer to the bottom on short pages */
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  background: var(--panel);
+  color: #fff;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.socialRow {
+  display: flex;
+  gap: 20px;
+}
+
+.socialIcon {
+  width: 60px;
+  height: auto;
+}
+
+/* ==========================================================
+   CONTENT BOXES (about/skills container, one per section)
+   ========================================================== */
+.contentBoxMain_index,
+.contentBoxMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 92%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  padding: 2%;                /* TODO mobile: 2% of a phone width is only ~8px, use a px/rem minimum */
+  margin: var(--nav-h) auto 30px;
+  background: var(--panel);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.contentBoxMain_index {
+  margin-top: 0;
+}
+
+/* ==========================================================
+   ABOUT ROW (text box left, picture box right)
+   ========================================================== */
+.aboutRow {
+  display: flex;
+  flex-wrap: wrap;            /* lets the boxes stack on small screens */
+  justify-content: center;
+  align-items: stretch;       /* both boxes match in height */
+  gap: 2%;
+  width: 90%;
+  max-width: 1200px;
+  margin: var(--nav-h) auto -4%;   /* TODO mobile: negative % margin is a hack, scales with screen width */
+}
+
+.pic_info,
+.pic_of_me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 0;
+  background: var(--panel);
+  border-radius: 10px;
+  color: var(--text);
+}
+
+.pic_info {
+  width: 38%;                 /* 38 + 60 + 2% gap = 100% */
+}
+
+.pic_of_me {
+  width: 60%;
+}
+
+.me-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* ==========================================================
+   PROJECT CARDS (main page)
+   ========================================================== */
+.row {
+  display: flex;              /* TODO mobile: no flex-wrap, 3 cards side by side overflow a phone */
   justify-content: center;
   gap: 1%;
   margin-bottom: 2%;
 }
-
-/* .banner {
-  background: #252525;
-  color: #ffffff;
-  font-weight: normal;
-  padding: 1.5%;
-  margin: -75px -60px 30px -60px;
-} */
 
 .box {
   position: relative;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px; /*TODO FIX*/
-  padding: 1.5% 1.5%;
-  background: #252525;
-  border-radius: 1%;
+  gap: 10px;
+  padding: 20px;
+  background: var(--panel);
+  border-radius: 10px;
+  color: var(--text);
   transition: background 0.3s ease, transform 0.2s ease;
-  color: #eee;
-  text-decoration: none;
 }
 
 .box:hover {
-  background: #555;
+  background: var(--hover);
   transform: scale(1.05);
   color: #fff;
 }
@@ -85,8 +216,8 @@ body {
 }
 
 .box-img {
-  width: 450px;
-  height: 300px;
+  width: 450px;               /* TODO mobile: fixed size, use width: 100%; max-width: 450px; aspect-ratio: 3 / 2; */
+  height: 300px;              /* TODO mobile: fixed size, remove once aspect-ratio is used */
   object-fit: cover;
   border-radius: 6px;
 }
@@ -96,137 +227,9 @@ body {
   color: #ccc;
 }
 
-a {
-  color: #6cf;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #fff;
-}
-
-.navBar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0px;      /* replaces width: 100% */
-  height: 10%;
-  box-sizing: border-box;
-  background: #252525;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2%;
-}
-
-/* @media (max-width: 830px) {
-  .skillBox {
-    height: 25%;
-  }
-} */
-
-.navItem {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center; /* centers the text inside the fixed width */
-  width: 9%;            /* same for both buttons */
-  box-sizing: border-box;
-  padding: 1.5% 0;
-  background: #252525;
-  border-radius: 3%;
-  transition: background 0.3s ease, transform 0.2s ease;
-  color: #eee;
-  text-decoration: none;
-  font-size: 1.5em;
-}
-
-.socialRow {
-  display: flex;
-  gap: 20px;
-}
-
-.contentBoxMain_index, 
-.contentBoxMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1%;
-
-  width: 92%;
-  max-width: 1200px;
-  box-sizing: border-box;
-
-  padding: 2%;
-  background: #252525;
-  border-radius: 1%;
-  color: #eee;
-
-  margin: 110px auto 30px;
-}
-
-.contentBoxMain_index {
-  margin-top: 0%;
-}
-
-.aboutRow {
-  display: flex;
-  flex-wrap: wrap;          /* lets the boxes stack on small screens */
-  justify-content: center;
-  align-items: stretch;     /* both boxes match in height */
-  gap: 2%;
-  width: 90%;
-  max-width: 1200px;
-  margin: 110px auto -4%;  /* the 110px top margin moves here from the boxes */
-}
-
-.pic_info,
-.pic_of_me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 49%;
-  box-sizing: border-box;
-  padding: 20px;
-  background: #252525;
-  border-radius: 10px;
-  color: #eee;
-  margin: 0;
-}
-
-.pic_info {
-  width: 38%;   /* text box */
-}
-
-.socialIcon{
-  width: 60px;      
-  height: auto;     
-}
-
-.pic_of_me {
-  width: 60%;   /* picture box */
-}
-
-.me-img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-@media (max-width: 768px) { /* Note  that ima make ts for everything TODO */
-  .pic_info,
-  .pic_of_me {
-    width: 100%;
-  }
-
-  .aboutRow {
-    gap: 20px;
-  }
-}
-
+/* ==========================================================
+   SKILLS
+   ========================================================== */
 .skillRow {
   display: flex;
   flex-wrap: wrap;
@@ -236,27 +239,14 @@ a:hover {
 }
 
 .skillBox {
-  flex: 1 1 22%;
-  min-width: 250px;
+  flex: 1 1 22%;              /* 4 per row; 2 and 1 per row are set in the responsive section */
+  min-width: 0;               /* the old 250px min-width caused the 3 + 1 split */
   box-sizing: border-box;
   padding: 15px;
   margin-bottom: 15px;
-  background: #333;
+  background: var(--panel-light);
   border-radius: 10px;
 }
-
-/* @media (max-width: 1100px) {
-  .skillBox {
-    flex: 1 1 50%;
-  }
-}
-
-@media (max-width: 600px) {
-  .skillBox {
-    flex: 1 1 100%;
-  }
-} */
-
 
 .skillBox h3 {
   margin-top: 0;
@@ -269,17 +259,9 @@ a:hover {
   padding-left: 20px;
 }
 
-.navItem:hover {
-  background: #555;
-  transform: scale(1.05);
-  color: #fff;
-}
-
-.hidden {
-  color: #1a1a1a;
-  margin-top: -1%;
-}
-
+/* ==========================================================
+   TAGS
+   ========================================================== */
 .tagRow {
   display: flex;
   flex-wrap: wrap;
@@ -288,15 +270,15 @@ a:hover {
 }
 
 .tag {
-  background: #333;
-  color: #eee;
   padding: 12px 24px;
+  background: var(--panel-light);
   border-radius: 20px;
-  font-size: 1.2em;
+  color: var(--text);
+  font-size: 1.2rem;
 }
 
 .tagRowPortfolio {
-  position: absolute;
+  position: absolute;         /* TODO mobile: if card text wraps to more lines, the tags overlap it */
   bottom: 15px;
   left: 0;
   width: 100%;
@@ -307,10 +289,60 @@ a:hover {
 }
 
 .tagPortfolio {
-  background: #333;
-  color: #eee;
   padding: 12px 24px;
+  background: var(--panel-light);
   border-radius: 20px;
-  font-size: 0.9em;
+  color: var(--text);
+  font-size: 0.9rem;
   font-weight: bold;
+}
+
+/* ==========================================================
+   MISC
+   ========================================================== */
+.hidden {
+  color: var(--bg);           /* TODO mobile: invisible text used as a spacer, replace with a margin */
+  margin-top: -1%;
+}
+
+/* ==========================================================
+   RESPONSIVE (keep at the bottom so these override the rules above)
+   ========================================================== */
+
+/* Tablets and smaller: skills go 4 -> 2 per row (never 3) */
+@media (max-width: 1100px) {
+  .skillBox {
+    flex: 1 1 45%;
+  }
+}
+
+/* Large phones / small tablets */
+@media (max-width: 980px) {
+  .navItem {
+    font-size: 2rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  p,
+  li {
+    font-size: 1.8rem;
+  }
+
+  .pic_info,
+  .pic_of_me {
+    width: 100%;              /* stack the about boxes */
+  }
+
+  .aboutRow {
+    gap: 20px;
+  }
+}
+
+/* Small phones: skills go to a single column */
+@media (max-width: 600px) {
+  .skillBox {
+    flex: 1 1 100%;
+  }
 }
