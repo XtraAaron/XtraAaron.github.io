@@ -121,11 +121,11 @@ a:hover {
   gap: 2%;
 }
 
-@media (max-width: 830px) {
+/* @media (max-width: 830px) {
   .skillBox {
-    height: 15%;
+    height: 25%;
   }
-}
+} */
 
 .navItem {
   display: inline-flex;
@@ -140,6 +140,14 @@ a:hover {
   color: #eee;
   text-decoration: none;
   font-size: 1.5em;
+}
+@media (max-width: 980px) {
+  .skillBox {
+    height: 20%;
+  }
+  .navItem{
+    font-size: 2.5em;
+  }
 }
 
 .socialRow {
