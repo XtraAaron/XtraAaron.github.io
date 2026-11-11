@@ -131,7 +131,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center; /* centers the text inside the fixed width */
-  width: 180px;            /* same for both buttons */
+  width: 9%;            /* same for both buttons */
   box-sizing: border-box;
   padding: 1.5% 0;
   background: #252525;
