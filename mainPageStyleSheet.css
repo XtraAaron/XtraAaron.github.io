@@ -131,7 +131,7 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center; /* centers the text inside the fixed width */
-  width: 9%;            /* same for both buttons */
+  width: 20%;            /* same for both buttons */
   box-sizing: border-box;
   padding: 1.5% 0;
   background: #252525;
@@ -146,7 +146,7 @@ a:hover {
     height: 20%;
   }
   .navItem{
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 
