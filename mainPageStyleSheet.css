@@ -239,9 +239,15 @@ a:hover {
   border-radius: 10px;
 }
 
-@media (max-width: 880px) {
+@media (max-width: 1100px) {
   .skillBox {
-    flex: 1 1 2%; 
+    flex: 1 1 45%;     /* 2 per row */
+  }
+}
+
+@media (max-width: 600px) {
+  .skillBox {
+    flex: 1 1 100%;    /* 1 per row on phones */
   }
 }
 
