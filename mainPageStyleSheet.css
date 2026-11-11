@@ -5,8 +5,8 @@ html {
 h1 { font-size: 2.5em; }
 h2 { font-size: 2.1em; }
 h3 { font-size: 1.8em; }
-p  { font-size: 1.4em; }
-li  { font-size: 1.4em; }
+p  { font-size: 1.65em; }
+li  { font-size: 1.65em; }
 
 @media (max-width: 768px) {
   p    { font-size: 1.8rem; }
@@ -148,8 +148,8 @@ a:hover {
   align-items: center;
   gap: 10px;
 
-  width: 75%;
-  max-width: 1000px;
+  width: 85%;
+  max-width: 1200px;
   box-sizing: border-box;
 
   padding: 25px;
@@ -230,14 +230,21 @@ a:hover {
 }
 
 .skillBox {
-  flex: 1 1 45%;      /*4 per row*/
-  min-width: 175px;    /* below this, boxes drop to the next line */
+  flex: 1 1 22%;
+  min-width: 175px;
   box-sizing: border-box;
   padding: 15px;
   margin-bottom: 15px;
   background: #333;
   border-radius: 10px;
 }
+
+@media (max-width: 880px) {
+  .skillBox {
+    flex: 1 1 45%; 
+  }
+}
+
 
 .skillBox h3 {
   margin-top: 0;
