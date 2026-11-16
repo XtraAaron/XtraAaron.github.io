@@ -328,6 +328,21 @@ li { font-size: 1.65rem; }
   .navBar {
     gap: 4%;
   }  
+
+  .row  {
+    flex-wrap: wrap;
+  }
+
+  .box  {
+    width: 44%;
+    box-sizing: border-box;
+  }
+
+  .box-img  {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+  }
 }
 
 /* Phones */
