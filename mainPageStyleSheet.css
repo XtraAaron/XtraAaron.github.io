@@ -301,7 +301,7 @@ li { font-size: 1.65rem; }
    MISC
    ========================================================== */
 .hidden {
-  color: var(--bg);           /* TODO mobile: invisible text used as a spacer, replace with a margin */
+  color: #1a1a1a;          
   margin-top: -1%;
 }
 
