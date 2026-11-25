@@ -218,8 +218,8 @@ li { font-size: 1.65rem; }
 }
 
 .box-img {
-  width: 450px;               /* TODO mobile: fixed size, use width: 100%; max-width: 450px; aspect-ratio: 3 / 2; */
-  height: 300px;              /* TODO mobile: fixed size, remove once aspect-ratio is used */
+  width: 450px;
+  height: 300px;
   object-fit: cover;
   border-radius: 6px;
 }
@@ -319,31 +319,26 @@ li { font-size: 1.65rem; }
 }
 
 /* Large phones / small tablets */
+/* Large phones / small tablets */
 @media (max-width: 980px) {
   .navItem {
     width: 42%;
     padding: 18px 0;
-    font-size: 2rem;
-    font-size: 2.2rem;
+    font-size: 2.2rem;      /* removed the duplicate 2rem line */
   }
 
   .navBar {
     gap: 4%;
-  }  
-
-  .row  {
-    .row { grid-template-columns: repeat(2, 1fr); }
   }
 
-  .box  {
-    width: 44%;
-    box-sizing: border-box;
+  .row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));   /* 2 per row */
   }
 
-  .box-img  {
+  .box-img {/* TODO mobile: fixed size, use width: 100%; max-width: 450px; aspect-ratio: 3 / 2; */
     width: 100%;
-    height: auto;
-    aspect-ratio: 3 / 2;
+    max-width: 450px;
+    aspect-ratio: 3/2;
   }
 }
 
