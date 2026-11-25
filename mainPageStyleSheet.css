@@ -332,7 +332,6 @@ li { font-size: 1.65rem; }
   }  
 
   .row  {
-    flex-wrap: wrap;
     .row { grid-template-columns: repeat(2, 1fr); }
   }
 
