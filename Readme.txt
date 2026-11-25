@@ -1,4 +1,8 @@
 Add mobile support
     Fix the tag alighnment
-    why is the hidden text not hidden
+    add the top bar fix to every page element
 Add macropad interior image
+
+
+
+

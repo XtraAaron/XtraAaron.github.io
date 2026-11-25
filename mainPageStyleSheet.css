@@ -138,6 +138,10 @@ li { font-size: 1.65rem; }
   margin-top: 0;
 }
 
+.pageContent {
+  padding-top: var(--nav-h);   /* 110px, the same space the main page reserves */
+}
+
 /* ==========================================================
    ABOUT ROW (text box left, picture box right)
    ========================================================== */
