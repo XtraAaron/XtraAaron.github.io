@@ -341,9 +341,9 @@ li { font-size: 1.65rem; }
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 880px) {
   .row{
-    grid-template-columns: repeat(1, minmax(0, 1fr));   /* 2 per row */
+    grid-template-columns: repeat(1, minmax(0, 1fr));   /* 1 per row */
   }
 }
 
