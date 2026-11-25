@@ -342,6 +342,12 @@ li { font-size: 1.65rem; }
   }
 }
 
+@media (max-width: 480px) {
+  .row{
+    grid-template-columns: repeat(1, minmax(0, 1fr));   /* 2 per row */
+  }
+}
+
 /* Phones */
 @media (max-width: 768px) {
   p,
