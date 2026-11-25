@@ -185,10 +185,12 @@ li { font-size: 1.65rem; }
    PROJECT CARDS (main page)
    ========================================================== */
 .row {
-  display: flex;              /* TODO mobile: no flex-wrap, 3 cards side by side overflow a phone */
-  justify-content: center;
-  gap: 1%;
-  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);   /* 3 equal columns */
+  gap: 25px;
+  width: 94%;
+  max-width: 1500px;
+  margin: 0 auto 50px;
 }
 
 .box {
@@ -331,6 +333,7 @@ li { font-size: 1.65rem; }
 
   .row  {
     flex-wrap: wrap;
+    .row { grid-template-columns: repeat(2, 1fr); }
   }
 
   .box  {
