@@ -344,6 +344,11 @@ li { font-size: 1.65rem; }
     max-width: 450px;
     aspect-ratio: 3/2;
   }
+
+.tagPortfolio {
+  font-size: 0.75rem;
+}  
+
 }
 
 @media (max-width: 680px) {
