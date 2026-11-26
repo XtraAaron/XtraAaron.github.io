@@ -16,6 +16,7 @@
    ========================================================== */
 html {
   background: var(--panel);
+  color-scheme: dark;
 }
 
 body {
@@ -341,7 +342,7 @@ li { font-size: 1.65rem; }
   }
 
   .tagPortfolio {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
   }  
 
   .skillBox {
