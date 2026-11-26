@@ -276,14 +276,6 @@ li { font-size: 1.65rem; }
   gap: 10px;
 }
 
-.tag {
-  padding: 12px 24px;
-  background: var(--panel-light);
-  border-radius: 20px;
-  color: var(--text);
-  font-size: 1.2rem;
-}
-
 .tagRowPortfolio {
   position: auto;
   padding-top: 10px;
