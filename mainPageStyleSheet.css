@@ -128,7 +128,7 @@ li { font-size: 1.65rem; }
   max-width: 1200px;
   box-sizing: border-box;
   padding: 2%;
-  margin: var(--nav-h) auto 30px;
+  margin: var(--nav-h) auto auto;
   background: var(--panel);
   border-radius: 10px;
   color: var(--text);
