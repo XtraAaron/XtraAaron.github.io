@@ -307,7 +307,8 @@ li { font-size: 1.65rem; }
    MISC
    ========================================================== */
 .hidden {
-  color: #1a1a1a;          
+  color: #1a1a1a;         
+  font-size: 1.2rem; 
   /* margin-top: ; */
 }
 
