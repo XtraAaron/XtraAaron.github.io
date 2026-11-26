@@ -35,6 +35,10 @@
   border-radius: 6px;
 }
 
+.placeholder{
+  margin-top: var(--nav-h);
+}
+
 .contentBox {
   display: flex;
   flex-direction: column;
